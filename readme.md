@@ -1,6 +1,6 @@
 # Word Generator
-This is a word generator. This takes many syllables from real words and then uses it with some small rules. I will
-outline all of the rules here.
+This is a word generator. This takes all the letters of the english alphabet and uses it to generate words of the
+desired length and to then generate the desired number of randomized words.
 ## How are vowels treated?
 As a general rule of thumb, all vowels can be found placed side by side in the english language. The same cannot be said
 about consonants I.E. `XZ`, `ZT`, `TX`, etc. Hence, vowels do not need restrictions on where they can be placed or how
