@@ -20,6 +20,7 @@ function SyllableGenerator(V, C, RandomNumber, Weights, LastLetter)
 	end
 end
 function CaseVC(V, C, LastLetter)
+	local AllowedCases = {["b"] = {"a","b","e","l","o","r","s","u","y"},["c"] = {"a","c","e","h","i","k","l","o","r","s","t","u","y"}, ["d"] = {"a","d","e","i","o","r","s","u","y"}, ["f"] = {"a","e","f","i","l","o","r","s","u","y"}, ["g"] = {"a","e","g","i","l","o","r","s","u","y"}, ["h"] = {"a","e","i","o","u","y"}, ["j"] = {"a","e","i","o","u"}, ["k"] = {"a","e","i","k","o"}, ["l"] = {"a","e","i","l","o","r","t","u"}, ["m"] = {}}
 	if LastLetter then
 		
 	else
