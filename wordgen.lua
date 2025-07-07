@@ -1,12 +1,12 @@
 math.randomseed(os.clock())
-function RandomValueGenerator(V, C, SV, Weights)
+function RandomValueGenerator(V, C, Weights)
 	local WeightChooserNumber = math.random(100)
 	
 end
 function SyllablePutTogether(choice)
 	local V, C, Weights = {"a","e","i","o","u","y",},{"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z",},{45,45,10}
 	for num1 = 1, choice, 1 do
-		RandomValueGenerator(V, C, SV, Weights)
+		RandomValueGenerator(V, C, Weights)
 	end
 end
 repeat
