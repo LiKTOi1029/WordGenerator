@@ -11,7 +11,11 @@ There are two exceptions that will be disallowed: `ae` is almost never seen. I s
 `paediatric`, `anaemia`, `aesthetic`, etc. This exception is valid as this vowel pair is seldom used.\
 \
 The second exception is `uo` as it is **never** used in the english language. Go ahead, find a word with that vowel 
-pair in it. You won't.
+pair in it. You won't.\
+\
+There are some small cases where `y` may be considered a vowel. Generally speaking, `y` is seen following and preceeding
+most other vowels. However, `iy`, `yi`, `yu`, `uy` are all variations that are not valid. These variations will be
+exempt from all generated words.
 ## How are consonants treated?
 Generally speaking, all vowels can preceed and follow all other vowels. However, the same cannot be said for consonants. 
 As a general rule of thumb, the basic sequences of vowels and consonants in the english language are `VC`, `CV`, `VCV`, 
