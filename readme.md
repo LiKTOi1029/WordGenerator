@@ -23,4 +23,6 @@ may not simplify the rules stated here. However, it will simplify inner workings
 \
 Some consonant variations will be excempt from being generated. For instance, `ZX` and `XZ` aren't ever used in the english
 language. `PJ` and `JP` are never seen (`JPEG` does not count as it's not a real word. Instead, it's an abbreviation of multiple words). 
-There are many examples like these, however this was simply to name a few.
+There are many examples like these, however this was simply to name a few.\
+\
+The start of every word will be capitalized as in standard english.
