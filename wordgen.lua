@@ -1,8 +1,9 @@
 math.randomseed(os.clock())
 function RandomValueGenerator(V, C, Weights, InputTable)
-	local WeightChooserNumber = math.random(3)
-	for num2, name in ipairs(InputTable) do
-		print(InputTable[num2])
+	local MaxSlice, Slice = 0, 0
+	for num3, value in ipairs(Weights) do
+		MaxSlice = MaxSlice + value
+		print(MaxSlice)
 	end
 end
 function Separator(String)
@@ -14,7 +15,7 @@ function Separator(String)
 			table.insert(Table, String:sub(1,num1))
 		end
 	end
-	for num2, v in ipairs(Table) do
+	for num2, _ in ipairs(Table) do
 		Table[num2] = tonumber(Table[num2])
 	end
 	return Table
