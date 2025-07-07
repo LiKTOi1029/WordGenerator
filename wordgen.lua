@@ -1,16 +1,32 @@
 math.randomseed(os.clock())
-function RandomValueGenerator(V, C, Weights)
-	local WeightChooserNumber = math.random(100)
-	
+function RandomValueGenerator(V, C, Weights, InputTable)
+	local WeightChooserNumber = math.random(3)
+	for num2, name in ipairs(InputTable) do
+		print(InputTable[num2])
+	end
+end
+function Separator(String)
+	local Table = {}
+	for num1 = 1, String:len(), 1 do
+		if String:sub(num1,num1):match("%s") then
+			table.insert(Table, String:sub(num1,String:len()))
+			Table[1] = Table[1]:gsub(" ", "")
+			table.insert(Table, String:sub(1,num1))
+		end
+	end
+	for num2, v in ipairs(Table) do
+		Table[num2] = tonumber(Table[num2])
+	end
+	return Table
 end
 function SyllablePutTogether(choice)
-	local V, C, Weights = {"a","e","i","o","u","y",},{"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z",},{45,45,10}
-	for num1 = 1, choice, 1 do
-		RandomValueGenerator(V, C, Weights)
+	local V, C, Weights, InputTable = {"a","e","i","o","u","y",},{"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z",},{45,45,10},Separator(choice)
+	for num1 = 1, 2, 1 do
+		RandomValueGenerator(V, C, Weights, InputTable)
 	end
 end
 repeat
-	io.write("Write two numbers, one for the number of words and another for syllables per word.\nUse spaces as the delimiter I.E. \"3 3\"\n type exit to exit")
+	io.write("Write two numbers, the first one for the number of words and the second one for syllables per word.\nUse spaces as the delimiter I.E. \"3 3\"\n type exit to exit\n")
 	local choice = io.read():gsub("\n","")
-	if choice:match("^%d+%s+%d+$") then SyllablePutTogether(choice) end
-until choice:upper() == "EXIT'"
+	if choice:match("^%d+%s%d+$") then SyllablePutTogether(choice) end
+until choice:upper() == "EXIT"
