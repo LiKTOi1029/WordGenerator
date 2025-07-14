@@ -37,7 +37,7 @@ end
 
 function CaseVC(V, C, LastLetter)
 
-	local AllowedCases = {	["b"] = {"a","b","e","l","o","r","s","u","y"},
+	local AllowedCasesC = {	["b"] = {"a","b","e","l","o","r","s","u","y"},
 							["c"] = {"a","c","e","h","i","k","l","o","r","s","t","u","y"},
 							["d"] = {"a","d","e","i","o","r","s","u","y"},
 							["f"] = {"a","e","f","i","l","o","r","s","u","y"},
@@ -51,7 +51,13 @@ function CaseVC(V, C, LastLetter)
 							["p"] = {"a","e","h","i","n","o","p","r","s","u","y"},
 							["q"] = {"a","e","u"},
 							["r"] = {"a","b","c","d","e","f","g","h","i","k","l","m","n","o","p","r","s","t","u","y"},
-							}
+							["s"] = {"a","c","e","h","i","k","l","m","n","o","p","q","s","t","u","w","y"},
+							["t"] = {"a","e","h","i","o","r","s","t","u","w","y"},
+							["v"] = {"a","e","i","o","s","u","y"},
+							["w"] = {"a","e","i","o","s","u","y"},
+							["x"] = {"a","e","i","o","u","y"},
+							["y"] = {"a","e","i","o","s","u"},
+							["z"] = {"a","e","i","o","s","u","y"}}
 
 	if LastLetter then
 		
@@ -62,6 +68,14 @@ function CaseVC(V, C, LastLetter)
 end
 
 function CaseVCV(V, C, LastLetter)
+
+	local AllowedCasesV = {	["a"] = {},
+							["e"] = {},
+							["i"] = {},
+							["o"] = {},
+							["u"] = {},
+							["y"] = {}}
+	
 	if LastLetter then
 		
 	else
